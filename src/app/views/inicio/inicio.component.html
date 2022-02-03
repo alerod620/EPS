@@ -1,0 +1,51 @@
+<meta name=viewport content="width=device-width,initial-scale=1">  
+<meta charset="utf-8"/>
+
+<c-card class="mb-4">
+    <c-card-body>
+        <div class="center">
+            <h4 cCardTitle>Instrucciones</h4>
+        </div>
+      
+        <p cCardText>
+            1. Dar click en el botón 'Crear Material' que se encuentra bajo este texto.
+        </p>
+        <p cCardText>
+            2. Ingrese las ecuaciones necesarias o utilice las herramientas para crear el material dinámico deseado.
+        </p>
+        <p cCardText>
+            3. Al finalizar de crear el material, en la barra de opciones, ubicada del lado derecho, dirijase a la opción de compartir y copie el enlace que aparece.
+        </p>
+        <p cCardText>
+            4. Pegue el enlace en el campo que se presenta bajo la herramienta y escriba el nombre con el que desea que se guarde el enlace.
+        </p>
+
+        <div class="center">
+            <button cButton color="primary" [cModalToggle]="fullScreen.id">Crear Material</button>
+        </div>
+        
+    </c-card-body>
+  </c-card>
+
+  <c-modal #fullScreen [fullscreen]="true" id="fullScreen">
+    <c-modal-header>
+        <h5 cModalTitle>Creación de Material</h5>
+        <button [cModalToggle]="fullScreen.id" cButtonClose></button>
+    </c-modal-header>
+    <c-modal-body>
+        <div id="ggb-element"></div> 
+    </c-modal-body>
+    <c-modal-footer>
+        <button cButton [cModalToggle]="fullScreen.id">Close</button>
+    </c-modal-footer>
+  </c-modal>
+
+  <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+  <script>  
+    var params = {"appName": "graphing", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
+    var applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() { 
+        applet.inject('ggb-element');
+    });
+</script>

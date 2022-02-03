@@ -1,0 +1,20 @@
+<c-nav variant="tabs">
+    <a [active]="true" [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="0" cNavLink>Top Usuarios</a>
+    <a [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="1" cNavLink>Top Material</a>
+    <a [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="1" cNavLink>Reporte Mensual</a>
+  </c-nav>
+  <c-tab-content #tabContent="cTabContent">
+    <c-tab-pane class="p-3">
+        <c-chart [data]="data" type="bar" height="300" width="300"></c-chart>
+    </c-tab-pane>
+    <c-tab-pane class="p-3">
+      This is some placeholder content the <strong>Problemas Resueltos</strong> tab's associated content. Clicking another
+      tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the
+      content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation.
+    </c-tab-pane>
+    <c-tab-pane class="p-3">
+      This is some placeholder content the <strong>Problemas Resueltos</strong> tab's associated content. Clicking another
+      tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the
+      content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation.
+    </c-tab-pane>
+  </c-tab-content>

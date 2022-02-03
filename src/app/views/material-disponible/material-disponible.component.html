@@ -1,0 +1,53 @@
+<c-nav variant="tabs">
+    <a [active]="true" [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="0" cNavLink>Gráficas</a>
+    <a [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="1" cNavLink>Problemas Resueltos</a>
+  </c-nav>
+  <c-tab-content #tabContent="cTabContent">
+    <c-tab-pane class="p-3">
+        <table cTable hover>
+            <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Autor</th>
+              <th scope="col">Fecha de creación</th>
+              <th scope="col">Nombre del Material</th>
+              <th scope="col">Enlace</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>01/01/2022</td>
+              <td>Elipse</td>
+              <td>http://www.geogebra...</td>
+              <td><button cButton color="warning">Editar</button></td>
+              <td><button cButton color="danger">Eliminar</button></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacobo</td>
+              <td>10/02/2021</td>
+              <td>Hipérbola</td>
+              <td>http://www.geogebra...</td>
+              <td><button cButton color="warning">Editar</button></td>
+              <td><button cButton color="danger">Eliminar</button></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry</td>
+              <td>25/01/2022</td>
+              <td>Hipérbola</td>
+              <td>http://www.geogebra...</td>
+              <td><button cButton color="warning">Editar</button></td>
+              <td><button cButton color="danger">Eliminar</button></td>
+            </tr>
+            </tbody>
+          </table>
+    </c-tab-pane>
+    <c-tab-pane class="p-3">
+      This is some placeholder content the <strong>Problemas Resueltos</strong> tab's associated content. Clicking another
+      tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the
+      content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation.
+    </c-tab-pane>
+  </c-tab-content>
