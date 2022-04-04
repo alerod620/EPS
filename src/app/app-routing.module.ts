@@ -14,18 +14,23 @@ import { TutorialesComponent } from './views/tutoriales/tutoriales.component';
 import { ReportesComponent } from './views/reportes/reportes.component';
 import { UsuariosComponent } from './views/usuarios/usuarios.component';
 import { BitacoraComponent } from './views/bitacora/bitacora.component';
+import { BlogsComponent } from './views/blogs/blogs.component';
+import { CrearBlogComponent } from './views/crear-blog/crear-blog.component';
+import { RegistrarUsuariosComponent } from './views/registrar-usuarios/registrar-usuarios.component';
+import { AceptarComentariosComponent } from './views/aceptar-comentarios/aceptar-comentarios.component';
+import { RecuperarCuentaComponent } from './views/recuperar-cuenta/recuperar-cuenta.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'inicio',
     pathMatch: 'full'
   },
   {
     path: '',
     component: DefaultLayoutComponent,
     data: {
-      title: 'Home'
+      title: ''
     },
     children: [
       {
@@ -128,24 +133,38 @@ const routes: Routes = [
         }
       },
       {
-        path: 'login',
-        component: LoginComponent,
-        data: {
-          title: 'Login'
-        }
-      },
-      {
-        path: 'register',
-        component: RegisterComponent,
-        data: {
-          title: 'Registrar'
-        }
-      },
-      {
         path: 'bitacora',
         component: BitacoraComponent,
         data: {
           title: 'Bitacora'
+        }
+      },
+      {
+        path: 'blogs',
+        component: BlogsComponent,
+        data: {
+          title: 'Blogs'
+        }
+      },
+      {
+        path: 'crear-blog',
+        component: CrearBlogComponent,
+        data: {
+          title: 'Crear Blog'
+        }
+      },
+      {
+        path: 'registra-usuarios',
+        component: RegistrarUsuariosComponent,
+        data: {
+          title: 'Registrar Usuarios'
+        }
+      },
+      {
+        path: 'aceptar-comentarios',
+        component: AceptarComentariosComponent,
+        data: {
+          title: 'Aceptar Comentarios'
         }
       }
     ]
@@ -178,7 +197,14 @@ const routes: Routes = [
       title: 'Register Page'
     }
   },
-  {path: '**', redirectTo: 'dashboard'}
+  {
+    path: 'recuperar-cuenta',
+    component: RecuperarCuentaComponent,
+    data: {
+      title: 'Recuperar Cuenta'
+    }
+  },
+  {path: '**', redirectTo: 'inicio'}
 ];
 
 @NgModule({

@@ -13,12 +13,12 @@
       ></svg>
     </button>
     <c-header-nav class="d-none d-lg-flex me-auto">
+      
       <c-nav-item>
         <a cNavLink routerLink="/inicio" routerLinkActive="active">
           Inicio
         </a>
       </c-nav-item>
-      
       <c-nav-item>
         <a cNavLink routerLink="/profile" routerLinkActive="active">Cuenta</a>
       </c-nav-item>
@@ -42,6 +42,11 @@
       <c-nav-item>
         <a cNavLink routerLink="/bitacora" routerLinkActive="active">
           Bitácora
+        </a>
+      </c-nav-item>
+      <c-nav-item>
+        <a cNavLink routerLink="/aceptar-comentarios" routerLinkActive="active">
+          Comentarios
         </a>
       </c-nav-item>
       <!--
@@ -92,13 +97,13 @@
       <li>
         <a routerLink="profile" cDropdownItem>
           <svg cIcon class="me-2" name="cilUser"></svg>
-          Profile
+          Perfil
         </a>
       </li>
       <li>
         <a routerLink="./" cDropdownItem>
           <svg cIcon class="me-2" name="cilSettings"></svg>
-          Settings
+          Ajustes
         </a>
       </li>
       <li>

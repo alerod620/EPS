@@ -1,28 +1,84 @@
-<table cTable hover>
-    <thead>
-    <tr>
-      <th scope="col">Nombre</th>
-      <th scope="col">Enlace</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <td>Crear un círculo</td>
-      <td>http://www.youtube.com/...</td>
-      <td><button cButton color="warning">Editar</button></td>
-      <td><button cButton color="danger">Eliminar</button></td>
-    </tr>
-    <tr>
-        <td>Generar un Slider</td>
-      <td>http://www.youtube.com/...</td>
-      <td><button cButton color="warning">Editar</button></td>
-      <td><button cButton color="danger">Eliminar</button></td>
-    </tr>
-    <tr>
-        <td>Sumar valores dinámicos</td>
-      <td>http://www.youtube.com/...</td>
-      <td><button cButton color="warning">Editar</button></td>
-      <td><button cButton color="danger">Eliminar</button></td>
-    </tr>
-    </tbody>
-  </table>
+<c-accordion>
+  <c-accordion-item #item0="cAccordionItem" [open]="false">
+    <ng-template cTemplateId="accordionHeaderTemplate">
+      <button (click)="item0.toggleItem()" [collapsed]="!item0.open" cAccordionButton>
+        Gráficas
+      </button>
+    </ng-template>
+    <ng-template cTemplateId="accordionBodyTemplate">
+      <div class="accordion-body">
+        <table cTable hover>
+          <thead>
+            </thead>
+            <tbody>
+            <tr>
+              <td>
+                <div class="embed-responsive embed-responsive-21by9">
+                  <iframe width="300" height="169" src="https://www.youtube.com/embed/KDvL3Z2w8E4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </td>
+              <td>
+                <p>
+                  El Circulo se podria definir como el espacio geométrico que se encuentra dentro de una circunferencia. 
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="embed-responsive embed-responsive-21by9">
+                  <iframe width="300" height="169" src="https://www.youtube.com/embed/R9l8dNtFYPo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </td>
+              <td>
+                <p>
+                  Dadas 3 longitudes (números, no segmentos), construye un triángulo. Variación de una construcción clásica, excepto que la brújula no se usa para copiar longitudes, sino que se establece en los valores dados.
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </ng-template>
+  </c-accordion-item>
+  <c-accordion-item #item1="cAccordionItem" [open]="false">
+    <ng-template cTemplateId="accordionHeaderTemplate">
+      <button (click)="item1.toggleItem()" [collapsed]="!item1.open" cAccordionButton>
+        Herramientas
+      </button>
+    </ng-template>
+    <ng-template cTemplateId="accordionBodyTemplate">
+      <div class="accordion-body">
+        <table cTable hover>
+          <thead>
+            </thead>
+            <tbody>
+            <tr>
+              <td>
+                <div class="embed-responsive embed-responsive-21by9">
+                  <iframe width="300" height="169" src="https://www.youtube.com/embed/f17Eiic5QU4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </td>
+              <td>
+                <p>
+                  Se dan tres ejemplos de uso, para adaptarse a diferentes niveles de enseñanza. El video es una mera introducción y hay muchas cosas que puede hacer con un control slide que no se mencionan.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="embed-responsive embed-responsive-21by9">
+                  <iframe width="300" height="169" src="https://www.youtube.com/embed/xZ4I8JzO0oM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </td>
+              <td>
+                <p>
+                  ¡Podemos usar las reglas de construcción para copiar un segmento de línea! Esto es muy fácil usando solo las herramientas de brújula y línea.
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </ng-template>
+  </c-accordion-item>
+</c-accordion>

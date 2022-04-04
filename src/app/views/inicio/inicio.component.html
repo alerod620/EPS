@@ -1,12 +1,9 @@
-<meta name=viewport content="width=device-width,initial-scale=1">  
-<meta charset="utf-8"/>
-
 <c-card class="mb-4">
     <c-card-body>
         <div class="center">
             <h4 cCardTitle>Instrucciones</h4>
         </div>
-      
+        
         <p cCardText>
             1. Dar click en el botón 'Crear Material' que se encuentra bajo este texto.
         </p>
@@ -21,31 +18,46 @@
         </p>
 
         <div class="center">
-            <button cButton color="primary" [cModalToggle]="fullScreen.id">Crear Material</button>
+            <button cButton color="primary" [cModalToggle]="fullScreen2Xl.id">Crear Material</button>
         </div>
         
     </c-card-body>
-  </c-card>
+</c-card>
 
-  <c-modal #fullScreen [fullscreen]="true" id="fullScreen">
+<c-modal #fullScreen2Xl [fullscreen]="true" id="fullScreen2Xl">
     <c-modal-header>
-        <h5 cModalTitle>Creación de Material</h5>
-        <button [cModalToggle]="fullScreen.id" cButtonClose></button>
+        <h1 cModalTitle>Creación de Material</h1>
+        <button [cModalToggle]="fullScreen2Xl.id" cButtonClose></button>
     </c-modal-header>
+
     <c-modal-body>
-        <div id="ggb-element"></div> 
+        <div>
+        <table cTable hover>
+            <tbody>
+            <tr>
+                <td class="col-md-8">
+                    <div  id="ggb-element"></div> 
+                </td>
+                <td>
+                    <div class="col-md-4">
+                        <form cForm>
+                            <c-input-group class="mb-3">
+                            <input autoComplete="name" cFormControl placeholder="Nombre del material" />
+                            </c-input-group>
+                            <c-input-group class="mb-3">
+                            <input autoComplete="name" cFormControl placeholder="Enlace" />
+                            </c-input-group>
+                            <br>
+                            <div class="d-grid">
+                                <button cButton class="btn btn-success rounded-pill">Guardar</button>
+                            </div>
+                        </form>
+                    </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
     </c-modal-body>
-    <c-modal-footer>
-        <button cButton [cModalToggle]="fullScreen.id">Close</button>
-    </c-modal-footer>
-  </c-modal>
 
-  <script src="https://www.geogebra.org/apps/deployggb.js"></script>
-
-  <script>  
-    var params = {"appName": "graphing", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
-    var applet = new GGBApplet(params, true);
-    window.addEventListener("load", function() { 
-        applet.inject('ggb-element');
-    });
-</script>
+</c-modal>

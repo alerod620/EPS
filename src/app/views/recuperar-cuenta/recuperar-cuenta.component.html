@@ -1,0 +1,38 @@
+<div class="bg-light min-vh-100 d-flex flex-row align-items-center">
+    <c-container>
+      <c-row class="justify-content-center">
+        <c-col md="8">
+          <c-card-group>
+            <c-card class="p-4">
+              <c-card-body>
+                <form cForm>
+                  <h1>Recuperar cuenta</h1>
+                  <p class="text-medium-emphasis">Ingresa tu correo institucional</p>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText>
+                      <svg cIcon name="cilUser"></svg>
+                    </span>
+                    <input autoComplete="username" cFormControl placeholder="Correo institucional" />
+                  </c-input-group>
+                  <c-row>
+                    <c-col xs="6">
+                      <button cButton class="px-4" color="primary" routerLink="/login">
+                        Recuperar
+                      </button>
+                    </c-col>
+                    <c-col class="text-right" xs="6">
+                      <button cButton class="px-0" color="link" routerLink="/login">
+                        Iniciar sesión
+                      </button>
+                    </c-col>
+                  </c-row>
+                </form>
+              </c-card-body>
+            </c-card>
+            
+          </c-card-group>
+        </c-col>
+      </c-row>
+    </c-container>
+  </div>
+  

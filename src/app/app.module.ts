@@ -56,6 +56,12 @@ import { TutorialesComponent } from './views/tutoriales/tutoriales.component';
 import { ReportesComponent } from './views/reportes/reportes.component';
 import { UsuariosComponent } from './views/usuarios/usuarios.component';
 import { BitacoraComponent } from './views/bitacora/bitacora.component';
+import { BlogsComponent } from './views/blogs/blogs.component';
+import { CrearBlogComponent } from './views/crear-blog/crear-blog.component';
+import { RegistrarUsuariosComponent } from './views/registrar-usuarios/registrar-usuarios.component';
+import { AccordionModule } from '@coreui/angular';
+import { AceptarComentariosComponent } from './views/aceptar-comentarios/aceptar-comentarios.component';
+import { RecuperarCuentaComponent } from './views/recuperar-cuenta/recuperar-cuenta.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -68,8 +74,9 @@ const APP_CONTAINERS = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ...APP_CONTAINERS, ProfileComponent, MiMaterialComponent, MaterialDisponibleComponent, InicioComponent, TutorialesComponent, ReportesComponent, UsuariosComponent, BitacoraComponent],
+  declarations: [AppComponent, ...APP_CONTAINERS, ProfileComponent, MiMaterialComponent, MaterialDisponibleComponent, InicioComponent, TutorialesComponent, ReportesComponent, UsuariosComponent, BitacoraComponent, BlogsComponent, CrearBlogComponent, RegistrarUsuariosComponent, AceptarComentariosComponent, RecuperarCuentaComponent],
   imports: [
+    AccordionModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
