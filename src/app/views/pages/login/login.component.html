@@ -5,21 +5,25 @@
         <c-card-group>
           <c-card class="p-4">
             <c-card-body>
-              <form cForm>
+              <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
                 <h1>Iniciar sesión</h1>
                 <p class="text-medium-emphasis">Inicia sesión con tu correo institucional</p>
                 <c-input-group class="mb-3">
                   <span cInputGroupText>
                     <svg cIcon name="cilUser"></svg>
                   </span>
-                  <input autoComplete="username" cFormControl placeholder="Correo institucional" />
+                  <input 
+                    formControlName = "correo"
+                    cFormControl 
+                    placeholder="Correo institucional" 
+                    />
                 </c-input-group>
                 <c-input-group class="mb-4">
                   <span cInputGroupText>
                     <svg cIcon name="cilLockLocked"></svg>
                   </span>
                   <input
-                    autoComplete="current-password"
+                    formControlName = "password"
                     cFormControl
                     placeholder="Contraseña"
                     type="password"
@@ -27,7 +31,7 @@
                 </c-input-group>
                 <c-row>
                   <c-col xs="6">
-                    <button cButton class="px-4" color="primary" routerLink="/inicio">
+                    <button type="submit" cButton class="px-4" color="primary">
                       Iniciar sesión
                     </button>
                   </c-col>

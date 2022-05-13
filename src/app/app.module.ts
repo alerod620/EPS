@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 
 import { TableModule, ModalModule  } from '@coreui/angular';
 import { ChartjsComponent, ChartjsModule } from '@coreui/angular-chartjs'
@@ -106,6 +106,7 @@ const APP_CONTAINERS = [
     TableModule,
     ModalModule,
     ChartjsModule,
+    FormsModule,
   ],
   providers: [
     {
