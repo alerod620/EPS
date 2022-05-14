@@ -6,6 +6,7 @@ import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 
 import { TableModule, ModalModule  } from '@coreui/angular';
 import { ChartjsComponent, ChartjsModule } from '@coreui/angular-chartjs'
+import { HttpClientModule } from '@angular/common/http';
 
 import {
   PERFECT_SCROLLBAR_CONFIG,
@@ -107,6 +108,7 @@ const APP_CONTAINERS = [
     ModalModule,
     ChartjsModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [
     {

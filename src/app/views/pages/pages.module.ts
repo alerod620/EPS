@@ -10,6 +10,8 @@ import { ButtonModule, CardModule, FormModule, GridModule } from '@coreui/angula
 import { IconModule } from '@coreui/icons-angular';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
+import { HttpClientModule } from '@angular/common/http' 
+
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     IconModule,
     FormModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ]
 })
 export class PagesModule {
