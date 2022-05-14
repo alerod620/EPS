@@ -37,22 +37,20 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin(form:Login) {
-    console.log(form);
-    this.router.navigate(['inicio']);
-    /*
     this.api.loginByEmail(form).subscribe(data =>{
       let dataResponse: responseLogin = data;
-      if(dataResponse.status = "ok")
+      console.log(dataResponse);
+      if(dataResponse.status = "200")
       {
-        localStorage.setItem("Token", dataResponse.result);
+        //localStorage.setItem("Token", dataResponse.result);
         this.router.navigate(['inicio']);
       }
       else
       {
         this.errorStatus = true;
-        this.errorMessage = dataResponse.resutlt.error_msg;
+        this.errorMessage = dataResponse.result.error_msg;
       }
-    });*/
+    });
   }
 
 }
