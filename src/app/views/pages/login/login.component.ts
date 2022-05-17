@@ -4,7 +4,7 @@ import {FormGroup, FormControl, Validators} from '@angular/forms';
 
 import { ApiService } from '../../../services/api.service';
 import { Login } from '../../../models/login.interface'
-import { responseLogin } from 'src/app/models/responseLogin.interface';
+import { Response } from '../../../models/response.interface';
 import { Router } from '@angular/router';
 
 @Component({
@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
 
   onLogin(form:Login) {
     this.api.loginByEmail(form).subscribe(data =>{
-      let dataResponse: responseLogin = data;
+      let dataResponse: Response = data;
       console.log(dataResponse);
       if(dataResponse.status = "200")
       {

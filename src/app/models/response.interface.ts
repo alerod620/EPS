@@ -1,4 +1,4 @@
-export interface responseLogin
+export interface Response
 {
     status:string;
     result:any;

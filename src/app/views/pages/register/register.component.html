@@ -4,39 +4,56 @@
       <c-col lg="7" md="9" xl="6">
         <c-card class="mx-4">
           <c-card-body class="p-4">
-            <form cForm>
+            <form cForm [formGroup]="registerForm" (ngSubmit)="Register(registerForm.value)">
               <h1>Registrar</h1>
               <p class="text-medium-emphasis">Crea tu cuenta</p>
               <c-input-group class="mb-3">
                 <span cInputGroupText>
                   <svg cIcon name="cilUser"></svg>
                 </span>
-                <input autoComplete="name" cFormControl placeholder="Nombre" />
+                <input 
+                  formControlName = "nombre"
+                  cFormControl 
+                  placeholder="Nombre" />
               </c-input-group>
               <c-input-group class="mb-3">
                 <span cInputGroupText>
                   <svg cIcon name="cilUser"></svg>
                 </span>
-                <input autoComplete="name" cFormControl placeholder="Apellido" />
+                <input 
+                  formControlName = "apellido"
+                  cFormControl 
+                  placeholder="Apellido" />
               </c-input-group>
               <c-input-group class="mb-3">
                 <span cInputGroupText>@</span>
-                <input autoComplete="email" cFormControl placeholder="Correo institucional" />
+                <input
+                  formControlName = "correo"
+                  autoComplete="email" 
+                  cFormControl 
+                  placeholder="Correo institucional" />
               </c-input-group>
               <c-input-group class="mb-3">
                 <span cInputGroupText>
                   <svg cIcon name="cilLockLocked"></svg>
                 </span>
-                <input autoComplete="new-password" cFormControl placeholder="Contraseña" type="password" />
+                <input 
+                  formControlName = "password"
+                  cFormControl 
+                  placeholder="Contraseña" 
+                  type="password" />
               </c-input-group>
               <c-input-group class="mb-4">
                 <span cInputGroupText>
                   <svg cIcon name="cilLockLocked"></svg>
                 </span>
-                <input autoComplete="new-password" cFormControl placeholder="Confirmar Contraseña" type="password" />
+                <input 
+                  cFormControl 
+                  placeholder="Confirmar Contraseña" 
+                  type="password" />
               </c-input-group>
               <div class="d-grid">
-                <button cButton color="success">Registrar cuenta</button>
+                <button type="submit" cButton color="success">Registrar cuenta</button>
               </div>
               <c-container>
                 <c-row>
