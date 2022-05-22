@@ -3,5 +3,6 @@ export interface Register
     correo: string,
     password: string,
     nombre: string,
-    apellido: string
+    apellido: string,
+    confirmPassword: string
 }

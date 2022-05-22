@@ -33,6 +33,9 @@
                   cFormControl 
                   placeholder="Correo institucional" />
               </c-input-group>
+              <div *ngIf="" class="invalid-feedback">
+                El correo no es válido
+              </div>
               <c-input-group class="mb-3">
                 <span cInputGroupText>
                   <svg cIcon name="cilLockLocked"></svg>
@@ -48,19 +51,25 @@
                   <svg cIcon name="cilLockLocked"></svg>
                 </span>
                 <input 
+                  formControlName = "confirmPassword"
                   cFormControl 
                   placeholder="Confirmar Contraseña" 
                   type="password" />
               </c-input-group>
+              <div *ngIf="!samePassword" class="text-danger">
+                <small>Las contraseñas no coinciden</small>
+              </div>
               <div class="d-grid">
-                <button type="submit" cButton color="success">Registrar cuenta</button>
+                <button type="submit" [disabled]="!registerForm.valid" cButton color="success">Registrar cuenta</button>
               </div>
               <c-container>
                 <c-row>
-                  <c-col xs="6">
-                    <p>¿Ya posees cuenta?</p>
-                  </c-col>
                   <c-col class="text-right" xs="6">
+                    <button cButton class="px-0" [disabled]="true" color="black">
+                      ¿Ya posees cuenta?
+                    </button>
+                  </c-col>
+                  <c-col class="text-right" md="6">
                     <button cButton class="px-0" color="link" routerLink="/login">
                       Iniciar sesión
                     </button>
