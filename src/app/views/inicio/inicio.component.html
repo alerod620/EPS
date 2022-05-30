@@ -31,6 +31,7 @@
     </c-modal-header>
 
     <c-modal-body>
+        <!--
         <div>
         <table cTable hover>
             <tbody>
@@ -57,6 +58,26 @@
               </tr>
             </tbody>
           </table>
+        </div>
+        -->
+        <div class="c-container">
+            <div class="row">
+                <div class = "col-8" id="ggb-element"></div> 
+                <div class="bg-light d-flex flex-row align-items-center col-4">
+                    <form cForm>
+                        <c-input-group class="mb-3">
+                        <input autoComplete="name" cFormControl placeholder="Nombre del material" />
+                        </c-input-group>
+                        <c-input-group class="mb-3">
+                        <input autoComplete="name" cFormControl placeholder="Enlace" />
+                        </c-input-group>
+                        <br>
+                        <div class="d-grid">
+                            <button cButton class="btn btn-success rounded-pill">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </c-modal-body>
 
